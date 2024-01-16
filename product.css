@@ -356,6 +356,7 @@ h5 {
   aspect-ratio: 1;
   border-radius: 50%;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .black {
@@ -403,6 +404,7 @@ h5 {
   all: unset;
   width: 100%;
   padding-top: 5px;
+  object-fit: cover;
 }
 
 .product-review {
