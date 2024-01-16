@@ -1,42 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="product.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="counter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f32fcd4286.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Products</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="brand-name">
+        <span
+          ><a href=""><i class="fa-solid fa-arrow-left"></i></a
+        ></span>
+        &nbsp;&nbsp;Studds
+      </div>
+      <div class="icons">
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <span><a href="">&#x2764;</a></span>
+        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </header>
+
     <!-- Slider -->
-    <div class="slider">
-  
-<span>       
-  <a href="#slide-1"><img src="./Images/Helm 01.jpg" alt=""></a>
-  <a href="#slide-2"><img src="./Images/Helm 02.jpg" alt=""></a>
-  <a href="#slide-3"><img src="./Images/Helm 03.jpg" alt=""></a>
-  <a href="#slide-4"><img src="./Images/Helm 05.jpg" alt=""></a>
-  <a href="#slide-5"><img src="./Images/Helm 05.jpg" alt=""></a>
-  </span>
-      
-        <div class="slides">
-          <div id="slide-1">
-            <img src="./Images/Helm 01.jpg" alt="">
+
+    <main class="main">
+      <section class="main-one">
+        <section class="slider-small">
+          <div class="slider">
+            <!-- <span>
+              <a href="#slide-1"><img src="./Images/Helm 01.jpg" alt="" /></a>
+              <a href="#slide-2"><img src="./Images/Helm 02.jpg" alt="" /></a>
+              <a href="#slide-3"><img src="./Images/Helm 03.jpg" alt="" /></a>
+              <a href="#slide-4"><img src="./Images/Helm 05.jpg" alt="" /></a>
+              <a href="#slide-5"><img src="./Images/Helm 05.jpg" alt="" /></a>
+            </span> -->
+
+            <div class="slides">
+              <div id="slide-1">
+                <img src="./Images/Helm 01.jpg" alt="" />
+              </div>
+              <div id="slide-2">
+                <img src="./Images/Helm 02.jpg" alt="" />
+              </div>
+              <div id="slide-3">
+                <img src="./Images/Helm 03.jpg" alt="" />
+              </div>
+              <div id="slide-4">
+                <img src="./Images/Helm 05.jpg" alt="" />
+              </div>
+              <div id="slide-5">
+                <img src="./Images/Helm 05.jpg" alt="" />
+              </div>
+            </div>
           </div>
-          <div id="slide-2">
-            <img src="./Images/Helm 02.jpg" alt="">
+        </section>
+
+        <!-- slider end -->
+
+        <section class="slider-large">
+          <div
+            class="gallery js-flickity"
+            data-flickity-options='{ "wrapAround": true }'
+          >
+            <div class="gallery-cell">
+              <img src="./Images/Helm 01.jpg" alt="" />
+            </div>
+            <div class="gallery-cell">
+              <img src="./Images/Helm 02.jpg" alt="" />
+            </div>
+            <div class="gallery-cell">
+              <img src="./Images/Helm 03.jpg" alt="" />
+            </div>
+            <div class="gallery-cell">
+              <img src="./Images/Helm 05.jpg" alt="" />
+            </div>
+            <div class="gallery-cell">
+              <img src="./Images/Helm 05.jpg" alt="" />
+            </div>
           </div>
-          <div id="slide-3">
-            <img src="./Images/Helm 03.jpg" alt="">
+        </section>
+      </section>
+      <section class="main-two">
+        <div class="box-spans">
+          <h2 class="header-two">Drifter D2 Leopard</h2>
+          <p class="header-paragraph">
+            STUDDS Drifter D2 Full Face Helmet with Clear Visor (Blue N9, M)
+            Motorbike Helmet (Blue)
+          </p>
+          <p class="price">
+            <span>INR. 2550</span>&nbsp; ─&nbsp; INR. 2450
+            <span class="offer">&nbsp;(4% OFF)</span>
+          </p>
+        </div>
+        <div class="box-spans">
+          <h5 class="size-two">Size :</h5>
+          <div class="size-container">
+            <button class="size-m">M</button>
+            <button class="size-l">L</button>
+            <button class="size-xl">XL</button>
           </div>
-          <div id="slide-4">
-            <img src="./Images/Helm 05.jpg" alt="">
-          </div>
-          <div id="slide-5">
-            <img src="./Images/Helm 05.jpg" alt="">
+          <h5 class="graphics-two">Color :</h5>
+          <div class="graphics-container">
+            <button class="c-1">Blue</button>
+            <button class="c-2">Green</button>
+            <button class="c-3">Red</button>
           </div>
         </div>
-      </div>
+        <div class="box-spans">
+          <h5 class="graphics-two">Product Info</h5>
+          <div class="product-info">
+            <span>Product Code: 38226440874188</span>
+            <span>Category:Full Face</span>
+            <span>Brand: STUDDS</span>
+          </div>
+        </div>
+        <div class="box-spans">
+          <h5 class="graphics-two">Check Delivery & Services</h5>
+          <div class="check">
+            <input type="text" placeholder="Enter a Pin Code" />
+            <div class="check-link"><a href="#">Check</a></div>
+          </div>
+          <div class="product-info delivery-services">
+            <span>Pay on delivery might be available</span>
+            <span>Easy 7 days returns and exchanges</span>
+            <span>Try & Buy might be available</span>
+          </div>
+        </div>
 
-      <!-- slider end -->
-</body>
+        <div class="box-spans">
+          <h5 class="graphics-two">Description</h5>
+          <div class="description">
+            Drifter D2 Leopard Decor is a full-face helmet with a high-impact
+            outer shell and UV-resistant paint along with product features like
+            an aerodynamic design, regulated density EPS, dynamic ventilation
+            system with chin and top air vents, and hot air exhausts,
+            hypoallergenic and replaceable liner, removable and replaceable
+            lower trim, silicone-coated dual visor with quick release chin
+            strap. It also comes with a special dual visor lever. Drifter D2
+            Decor-Leopard series comes in various sizes and graphics options. To
+            make it look more aggressive, each helmet comes with a matching
+            spoiler. Install and flaunt it. Rule the road with the Drifter
+            D2-Leopard series of helmets.
+          </div>
+        </div>
+        <div class="add-to-cart">
+          <button class="wishlist">&#x2764; &nbsp;Wishlist</button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-shopping"></i> &nbsp; Add To Cart
+          </button>
+        </div>
+        <div class="box-spans">
+          <h5 class="graphics-two">Shipping Info</h5>
+          <div class="shipping-info">
+            Shipping within 7 working days Customized products despatched after
+            mentioned time delay
+          </div>
+        </div>
+        <div class="box-spans profile-container">
+          <div class="profile">
+            <img src="./Images/avatar-svgrepo-com.svg" alt="" />
+            <div class="profile-name">Black Panther</div>
+          </div>
+          <button class="view-store">View Store</button>
+        </div>
+        <div class="box-spans black blue-icon-container">
+          <div class="blue-icon-1 blue-icon">
+            <img src="./Icons/free-shipping.png" alt="" class="img-icon-1" />
+          </div>
+          <div class="blue-icon-2 blue-icon">
+            <img src="./Icons/best-quality.png" alt="" class="img-icon-2" />
+          </div>
+        </div>
+        <div class="box-spans">
+          <h5 class="graphics-two normal-text">Rating & Reviews</h5>
+          <div class="product-review">
+            <div class="stars">
+              <span
+                >4.2
+                <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+              </span>
+              <p><span>9</span> Certified Buyers</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="star-container">
+              <div class="star-5">
+                <span>5 <i class="fa-solid fa-star"></i> </span>
+                <div class="bar-5 bar"><div></div></div>
+                6
+              </div>
+              <div class="star-4">
+                <span>4 <i class="fa-solid fa-star"></i> </span>
+                <div class="bar-4 bar"><div></div></div>
+                1
+              </div>
+              <div class="star-3">
+                <span>3 <i class="fa-solid fa-star"></i> </span>
+                <div class="bar-3 bar"><div></div></div>
+                0
+              </div>
+              <div class="star-2">
+                <span>2 <i class="fa-solid fa-star"></i> </span>
+                <div class="bar-2 bar"><div></div></div>
+                2
+              </div>
+              <div class="star-1">
+                <span>1 <i class="fa-solid fa-star"></i> </span>
+                <div class="bar-1 bar"><div></div></div>
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-spans">
+          <h5 class="graphics-two">Customer Reviews (2)</h5>
+          <div class="review-info">
+            <div class="customer-review">
+              <div>5 <i class="fa-solid fa-star"></i></div>
+              Good Product
+            </div>
+            <span>
+              <div class="customer-name">Ravi Prakash Sing | 10 Jun 2024</div>
+              <div class="review-icons">
+                <i class="fa-regular fa-thumbs-up"></i> 0 &nbsp;
+                <i class="fa-regular fa-thumbs-down"></i> 0
+              </div>
+            </span>
+          </div>
+          <hr />
+          <div class="review-info">
+            <div class="customer-review">
+              <div>5 <i class="fa-solid fa-star"></i></div>
+              Excellent
+            </div>
+            <span>
+              <div class="customer-name">Shubham Walande | 18 Dec 2023</div>
+              <div class="review-icons">
+                <i class="fa-regular fa-thumbs-up"></i> 0 &nbsp;
+                <i class="fa-regular fa-thumbs-down"></i> 0
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <!-- <div class="add-to-cart">
+          <div class="input-group">
+            <button id="decrement">-</button>
+            <div class="counts">
+              <input type="number" id="input" value="0" readonly />
+            </div>
+            <button id="increment">+</button>
+          </div>
+
+          <button class="cart">ADD TO CART</button>
+          <button class="buy-now">BUY NOW</button>
+        </div> -->
+      </section>
+    </main>
+
+    <script src="product.js"></script>
+    <script src="counter.js"></script>
+  </body>
 </html>
