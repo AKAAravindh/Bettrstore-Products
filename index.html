@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="product.css" />
-    <link rel="stylesheet" href="counter.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +21,7 @@
     ></script>
     <title>Products</title>
   </head>
-  <body>
+  <body onload="changes()">
     <header>
       <div class="brand-name">
         <span
@@ -32,7 +31,9 @@
       </div>
       <div class="icons">
         <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-        <span><a href="">&#x2764;</a></span>
+        <span
+          ><a href=""><i class="fa fa-heart"></i></a
+        ></span>
         <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </header>
@@ -97,18 +98,76 @@
         </section>
       </section>
       <section class="main-two">
-        <div class="box-spans">
+        <div class="box-spans product-name-detail-container">
           <h2 class="header-two">Drifter D2 Leopard</h2>
           <p class="header-paragraph">
             STUDDS Drifter D2 Full Face Helmet with Clear Visor (Blue N9, M)
             Motorbike Helmet (Blue)
           </p>
           <p class="price">
-            <span>INR. 2550</span>&nbsp; ─&nbsp; INR. 2450
+            <span>INR. 2550</span>&nbsp; ─&nbsp; INR.
+            <span class="real-amount" id="real-amount">2450</span>
             <span class="offer">&nbsp;(4% OFF)</span>
           </p>
+          <div class="discounts discount-border" id="discounts-container">
+            <span>
+              <img src="./Icons/coupon.png" alt="" />
+              <p>
+                Bettr Coin applicable grab at
+                <span>INR. <span id="coupon-discount">10</span></span>
+              </p>
+            </span>
+            <!-- <span class="discount-apply">
+              <input
+                class="discount-input"
+                type="checkbox"
+                name="discount"
+                id="discount"
+                onclick="validate()"
+              />
+              <h4>Apply discount for this product</h4>
+            </span> -->
+          </div>
         </div>
-        <div class="box-spans">
+        <!-- <div class="box-spans discount-container">
+          <div class="discounts">
+            <span>
+              <img src="./Icons/coupon.png" alt="" />
+              <p>
+                Bettr Coin applicable grab at
+                <span>INR. <span id="coupon-discount">10</span></span>
+              </p>
+            </span>
+            <span class="discount-apply">
+              <input
+                class="discount-input"
+                type="checkbox"
+                name="discount"
+                id="discount"
+                onclick="validate()"
+              />
+              <h3>Apply discount for this product</h3>
+            </span>
+          </div>
+        </div> -->
+        <div class="box-spans customization customization-container">
+          <textarea
+            name=""
+            id="custom"
+            cols="30"
+            rows="10"
+            class="customization-textarea"
+            placeholder="..."
+          ></textarea>
+          <label class="input-label" for="custom">
+            Send a special note for customization
+          </label>
+          <p>
+            <img src="./Icons/info-circle.svg" alt="" />
+            Return not available for this product
+          </p>
+        </div>
+        <div class="box-spans size-color-container">
           <h5 class="size-two">Size :</h5>
           <div class="size-container">
             <button class="size-m">M</button>
@@ -122,7 +181,7 @@
             <button class="c-3">Red</button>
           </div>
         </div>
-        <div class="box-spans">
+        <div class="box-spans product-information-container">
           <h5 class="graphics-two">Product Info</h5>
           <div class="product-info">
             <span>Product Code: 38226440874188</span>
@@ -130,20 +189,7 @@
             <span>Brand: STUDDS</span>
           </div>
         </div>
-        <div class="box-spans">
-          <h5 class="graphics-two">Check Delivery & Services</h5>
-          <div class="check">
-            <input type="text" placeholder="Enter a Pin Code" />
-            <div class="check-link"><a href="#">Check</a></div>
-          </div>
-          <div class="product-info delivery-services">
-            <span>Pay on delivery might be available</span>
-            <span>Easy 7 days returns and exchanges</span>
-            <span>Try & Buy might be available</span>
-          </div>
-        </div>
-
-        <div class="box-spans">
+        <div class="box-spans description-container">
           <h5 class="graphics-two">Description</h5>
           <div class="description">
             Drifter D2 Leopard Decor is a full-face helmet with a high-impact
@@ -159,13 +205,27 @@
             D2-Leopard series of helmets.
           </div>
         </div>
-        <div class="add-to-cart">
-          <button class="wishlist">&#x2764; &nbsp;Wishlist</button>
+        <div class="add-to-cart cart-wishlist-container">
+          <button class="wishlist">
+            <i class="fa fa-heart"></i> &nbsp;Wishlist
+          </button>
           <button class="cart">
             <i class="fa-solid fa-cart-shopping"></i> &nbsp; Add To Cart
           </button>
         </div>
-        <div class="box-spans">
+        <div class="box-spans delivery-services-container">
+          <h5 class="graphics-two">Check Delivery & Services</h5>
+          <div class="check">
+            <input type="text" placeholder="Enter a Pin Code" />
+            <div class="check-link"><a href="#">Check</a></div>
+          </div>
+          <div class="product-info delivery-services">
+            <span>Pay on delivery might be available</span>
+            <span>Easy 7 days returns and exchanges</span>
+            <span>Try & Buy might be available</span>
+          </div>
+        </div>
+        <div class="box-spans shipping-information-container">
           <h5 class="graphics-two">Shipping Info</h5>
           <div class="shipping-info">
             Shipping within 7 working days Customized products despatched after
@@ -181,13 +241,10 @@
         </div>
         <div class="box-spans black blue-icon-container">
           <div class="blue-icon-1 blue-icon">
-            <img src="./Icons/free-shipping.png" alt="" class="img-icon-1" />
-          </div>
-          <div class="blue-icon-2 blue-icon">
-            <img src="./Icons/best-quality.png" alt="" class="img-icon-2" />
+            <img src="./Icons/Asset 2@10x.png" alt="" class="img-icon-1" />
           </div>
         </div>
-        <div class="box-spans">
+        <div class="box-spans rating-review-container">
           <h5 class="graphics-two normal-text">Rating & Reviews</h5>
           <div class="product-review">
             <div class="stars">
@@ -227,7 +284,7 @@
             </div>
           </div>
         </div>
-        <div class="box-spans">
+        <div class="box-spans customer-review-container">
           <h5 class="graphics-two">Customer Reviews (2)</h5>
           <div class="review-info">
             <div class="customer-review">
@@ -257,23 +314,108 @@
             </span>
           </div>
         </div>
-
-        <!-- <div class="add-to-cart">
-          <div class="input-group">
-            <button id="decrement">-</button>
-            <div class="counts">
-              <input type="number" id="input" value="0" readonly />
+        <div class="box-spans related-products-container">
+          <h5 class="size-two">You might also like</h5>
+          <div class="product-containers">
+            <div class="product-cards">
+              <div class="card-image">
+                <img src="./Images/Helm 01.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <a href="#">Drifter D2 Leopard</a>
+                <p><span class="card-price">2550</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span>2450</span></p>
+                <span class="offer">4% OFF</span>
+                <span class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(0)</span>
+                </span>
+              </div>
             </div>
-            <button id="increment">+</button>
+            <div class="product-cards">
+              <div class="card-image">
+                <img src="./Images/NeonYellowBlue_1_900x.webp" alt="" />
+              </div>
+              <div class="card-body">
+                <a href="#">Drifter D2 Leopard</a>
+                <p><span class="card-price">2550</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span>2450</span></p>
+                <span class="offer">4% OFF</span>
+                <span class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(0)</span>
+                </span>
+              </div>
+            </div>
+            <div class="product-cards">
+              <div class="card-image">
+                <img src="./Images/LEO N92 (1).webp" alt="" />
+              </div>
+              <div class="card-body">
+                <a href="#">Drifter D2 Leopard</a>
+                <p><span class="card-price">2550</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span>2450</span></p>
+                <span class="offer">4% OFF</span>
+                <span class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(0)</span>
+                </span>
+              </div>
+            </div>
+            <div class="product-cards">
+              <div class="card-image">
+                <img src="./Images/GREY N92.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <a href="#">Drifter D2 Leopard</a>
+                <p><span class="card-price">2550</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span>2450</span></p>
+                <span class="offer">4% OFF</span>
+                <span class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(0)</span>
+                </span>
+              </div>
+            </div>
+            <div class="product-cards">
+              <div class="card-image">
+                <img src="./Images/Helm 01.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <a href="#">Drifter D2 Leopard</a>
+                <p><span class="card-price">2550</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span>2450</span></p>
+                <span class="offer">4% OFF</span>
+                <span class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(0)</span>
+                </span>
+              </div>
+            </div>
+            
           </div>
-
-          <button class="cart">ADD TO CART</button>
-          <button class="buy-now">BUY NOW</button>
+        </div>
+        <!-- <div class="box-spans">
         </div> -->
       </section>
     </main>
 
     <script src="product.js"></script>
-    <script src="counter.js"></script>
+    <script src="offer.js"></script>
   </body>
 </html>
